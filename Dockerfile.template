@@ -17,7 +17,11 @@ WORKDIR /usr/src/app
 # Move app to filesystem
 COPY ./app ./
 
-## uncomment if you want systemd
+# Ensure web interface can be enabled from within Resin.io console
+RUN echo "" >> /etc/cups/cupsd.conf \
+    && echo "Port 80" >> /etc/cups/cupsd.conf
+
+# Uncomment if you want systemd
 ENV INITSYSTEM on
 
 # Start app
