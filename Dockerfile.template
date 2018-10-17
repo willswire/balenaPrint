@@ -9,17 +9,20 @@ RUN apt-get update && apt-get install -y \
   avahi-daemon \
   avahi-discover \
   iptables \
-  unison \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Move to app dir
 WORKDIR /usr/src/app
 
+# Clear any contents made by the default CUPS installation
+RUN rm -r /etc/cups/
+
+# Establish SymLink for persistent /data/ and restart  CUPS
+RUN ln -s /data/cups /etc/cups \
+    && /etc/init.d/cups restart
+
 # Move app to filesystem
 COPY ./app ./
-
-# Ensure web interface can be enabled from within Resin.io console
-RUN echo unison /etc/cups/ /data/cups.bak/ -batch
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
