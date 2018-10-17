@@ -8,3 +8,6 @@ ln -s /data/cups /etc/cups
 
 # Restart CUPS
 /etc/init.d/cups restart
+
+# Change password to defaultpassword for root user
+echo -e "defaultpassword\ndefaultpassword" | (passwd root)
