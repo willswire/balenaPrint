@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   avahi-daemon \
   avahi-discover \
   iptables \
+  unison \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Move to app dir
@@ -18,8 +19,7 @@ WORKDIR /usr/src/app
 COPY ./app ./
 
 # Ensure web interface can be enabled from within Resin.io console
-RUN echo "" >> /etc/cups/cupsd.conf \
-    && echo "Port 80" >> /etc/cups/cupsd.conf
+RUN echo unison /Users/willwalker/Desktop/cups/ /Users/willwalker/Desktop/data/cups.bak/ -batch
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
