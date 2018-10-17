@@ -19,7 +19,7 @@ WORKDIR /usr/src/app
 COPY ./app ./
 
 # Ensure web interface can be enabled from within Resin.io console
-RUN echo unison /Users/willwalker/Desktop/cups/ /Users/willwalker/Desktop/data/cups.bak/ -batch
+RUN echo unison /etc/cups/ /data/cups.bak/ -batch
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
