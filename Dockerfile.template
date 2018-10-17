@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 # Move to app dir
 WORKDIR /usr/src/app
 
-# Move app to filesystem
-COPY ./app ./
+# Move setup script to filesystem
+COPY ./app/setup.sh ./
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
