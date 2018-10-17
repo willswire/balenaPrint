@@ -12,20 +12,13 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Move to app dir
-WORKDIR /usr/src/app
-
-# Clear any contents made by the default CUPS installation
-RUN rm -r /etc/cups/
-
-# Establish SymLink for persistent /data/ and restart  CUPS
-RUN ln -s /data/cups /etc/cups \
-    && /etc/init.d/cups restart
+WORKDIR /usr/src/setup
 
 # Move app to filesystem
-COPY ./app ./
+COPY ./setup ./
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
 
 # Start app
-CMD ["bash", "/usr/src/app/start.sh"]
+CMD ["bash", "/usr/src/app/setup.sh"]
