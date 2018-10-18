@@ -2,7 +2,7 @@
 
 # Copy default cups config files if /data/cups is empty
 if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
-    echo "Looks first install..."
+    echo "Looks like first install..."
     mkdir /data/cups
     echo "Moving default config files to persistent storage..."
     mv /usr/src/cups/* /data/cups
