@@ -2,6 +2,7 @@
 
 # Copy default cups config files if /data/cups is empty
 if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
+    mkdir /data/cups
     mv /usr/src/cups/* /data/cups
 fi
 
