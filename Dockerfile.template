@@ -10,10 +10,13 @@ RUN apt-get update && apt-get install -y \
   avahi-discover \
   iptables \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
+  
+# Move to app dir
+WORKDIR /usr/src/
 
 # Move setup script and CUPS config to filesystem
-COPY ./setup.sh /usr/src/
-COPY ./cups /usr/src/cups
+COPY ./setup.sh ./
+COPY ./cups ./cups
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
