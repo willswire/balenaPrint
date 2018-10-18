@@ -14,8 +14,9 @@ RUN apt-get update && apt-get install -y \
 # Move to app dir
 WORKDIR /usr/src
 
-# Move setup script to filesystem
+# Move setup script and CUPS config to filesystem
 COPY ./setup.sh ./
+COPY ./cups ./
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
