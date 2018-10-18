@@ -6,6 +6,7 @@ if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
     mkdir /data/cups
     echo "Moving default config files to persistent storage..."
     mv /usr/src/cups/* /data/cups
+    mkdir /data/cups/ssl
 fi
 
 # Clear any contents made by the default CUPS installation
