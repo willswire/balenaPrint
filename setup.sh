@@ -2,7 +2,7 @@
 
 # Copy default cups config files if /data/cups is empty
 if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
-    mv /usr/src/cups /data/
+    mv /usr/src/cups/* /data/cups
 fi
 
 # Clear any contents made by the default CUPS installation
