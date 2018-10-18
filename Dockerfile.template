@@ -16,7 +16,7 @@ WORKDIR /usr/src
 
 # Move setup script and CUPS config to filesystem
 COPY ./setup.sh ./
-COPY ./cups/* ./cups/
+COPY ./cups ./cups
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
