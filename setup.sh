@@ -9,6 +9,10 @@ if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
     mkdir /data/cups/ssl
 fi
 
+if [ "$(ls -A /data/cups 2> /dev/null)" != "" ]; then
+    echo "Existing data found for CUPS"
+fi
+
 # Clear any contents made by the default CUPS installation
 echo "Clearing default CUPS configuration files..."
 rm -r /etc/cups
