@@ -15,15 +15,7 @@ WORKDIR /usr/src/
 
 # Move setup script and CUPS config to filesystem
 COPY ./setup.sh ./
-COPY ./cups-update.tar.gz ./
 COPY ./cups ./cups
-
-# Update CUPS
-RUN tar xzvf cups-update.tar.gz \
-    && cd cups-2.2.9 \
-    && ./configure \
-    && make \
-    && make install
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
