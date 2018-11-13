@@ -19,11 +19,11 @@ COPY ./cups-update.tar.gz ./
 COPY ./cups ./cups
 
 # Update CUPS
-RUN echo 'tar xzvf cups-update.tar.gz' \
-    && echo 'cd cups' \
-    && echo './configure' \
-    && echo 'make' \
-    && echo 'make install'
+RUN tar xzvf cups-update.tar.gz \
+    && cd cups-update \
+    && ./configure \
+    && make \
+    && make install
 
 # Uncomment if you want systemd
 ENV INITSYSTEM on
