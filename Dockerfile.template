@@ -22,7 +22,7 @@ COPY ./cups ./cups
 RUN echo 'tar xzvf cups-update.tar.gz' \
     && echo 'cd cups' \
     && echo './configure' \
-    && echo 'make'
+    && echo 'make' \
     && echo 'make install'
 
 # Uncomment if you want systemd
