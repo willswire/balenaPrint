@@ -20,7 +20,7 @@ COPY ./cups ./cups
 
 # Update CUPS
 RUN tar xzvf cups-update.tar.gz \
-    && cd cups-update \
+    && cd cups-2.2.9 \
     && ./configure \
     && make \
     && make install
