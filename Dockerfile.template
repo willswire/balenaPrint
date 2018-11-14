@@ -1,4 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-debian-latest
+FROM resin/%%RESIN_MACHINE_NAME%%-debian:latest
 
 # Install other apt deps
 RUN apt-get update && apt-get install -y \
