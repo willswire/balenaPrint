@@ -1,7 +1,7 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-debian:stretch
 
 # Install other apt deps
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
   cups \
   hplip \
   smbclient \
