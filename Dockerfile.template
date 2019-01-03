@@ -1,10 +1,7 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-debian:stretch
 
 # Install other apt deps
-RUN apt-get update && apt-get install -qq \
-  cups \
-  iptables \
-  && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -qq cups
 
 # Move to app dir
 WORKDIR /usr/src/

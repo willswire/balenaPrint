@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Only allow web connections thru the resin-vpn interface
-iptables -A INPUT -i resin-vpn -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -p tcp --dport 80 -i resin-vpn -j ACCEPT
-iptables -A INPUT -p tcp --dport 631 -j ACCEPT
-iptables -A INPUT -p tcp --dport 80 -j REJECT
-
 # Copy default cups config files if /data/cups is empty
 if [ "$(ls -A /data/cups 2> /dev/null)" == "" ]; then
     echo "Looks like first install..."
