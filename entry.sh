@@ -32,5 +32,6 @@ echo "Setting default password for CUPS"
 echo 'root:defaultpassword' | chpasswd
 
 echo "CUPS Initialization Successful"
+echo "bind-interfaces" >> /etc/dnsmasq.conf
 /etc/init.d/dbus start
 cupsd -f & avahi-daemon
