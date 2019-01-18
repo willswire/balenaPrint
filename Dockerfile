@@ -4,6 +4,7 @@ FROM balenalib/raspberry-pi-debian:buster
 RUN install_packages \
     cups \
     avahi-daemon \
+    avahi-discover \
     colord \
     cups-filters \
     printer-driver-gutenprint \
