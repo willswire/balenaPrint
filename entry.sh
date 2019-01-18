@@ -32,4 +32,5 @@ echo "Setting default password for CUPS"
 echo 'root:defaultpassword' | chpasswd
 
 echo "CUPS Initialization Successful"
-cupsd -f
+/etc/init.d/dbus start
+cupsd -f & avahi-daemon
