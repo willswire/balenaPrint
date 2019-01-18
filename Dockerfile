@@ -1,7 +1,20 @@
 FROM balenalib/raspberry-pi-debian:buster
 
 # Install CUPS
-RUN install_packages cups
+RUN install_packages \
+    cups \
+    avahi-daemon \
+    colord \
+    cups-filters \
+    printer-driver-gutenprint \
+    cups-bsd \
+    cups-pdf \
+    foomatic-db-compressed-ppds \
+    hplip \
+    printer-driver-hpcups \
+    smbclient \
+    udev
+
 
 # Move to WORKDIR
 WORKDIR /usr/src/
