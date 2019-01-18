@@ -27,12 +27,9 @@ ln -s /etc/ssl/certs/ssl-cert-snakeoil.pem /etc/cups/ssl/server.crt
 echo "Establishing SymLink for server.key..."
 ln -s /etc/ssl/private/ssl-cert-snakeoil.key /etc/cups/ssl/server.key
 
-# Restart CUPS
-echo "CUPS Restarting..."
-/etc/init.d/cups restart
-
 # Change password to defaultpassword for root user
 echo "Setting default password for CUPS"
-echo -e "defaultpassword\ndefaultpassword" | (passwd root)
+echo 'root:defaultpassword' | chpasswd
 
 echo "CUPS Initialization Successful"
+cupsd -f
