@@ -23,5 +23,8 @@ WORKDIR /usr/src/
 COPY ./entry.sh ./
 COPY ./cups ./cups
 
+# Allow USB devices to connect
+ENV UDEV=1
+
 # Start app
 CMD ["bash", "entry.sh"]
