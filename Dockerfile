@@ -7,7 +7,7 @@ RUN install_packages cups
 WORKDIR /usr/src/
 
 # Move setup script and CUPS config to filesystem
-COPY ./setup.sh ./
+COPY ./entry.sh ./
 COPY ./cups ./cups
 
 # Start app
