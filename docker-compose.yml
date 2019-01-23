@@ -9,6 +9,7 @@ services:
     network_mode: host
     ports:
      - '53:53'
+     - '80:631'
      - '137:137'
      - '139:139'
      - '161:161'
@@ -18,6 +19,6 @@ services:
      - '631:631'
      - '5353:5353'
     volumes:
-      - 'cups:/etc/cups'
+     - 'cups:/etc/cups'
     privileged: true
     restart: always
