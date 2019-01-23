@@ -12,7 +12,8 @@ echo 'root:defaultpassword' | chpasswd
 
 # Start AVAHI daemon
 sed -i -r 's/#enable-dbus=yes/enable-dbus=no/' /etc/avahi/avahi-daemon.conf
+avahi-daemon
 
 # Start the CUPS service
 echo "CUPS starting..."
-cupsd -f & avahi-daemon
+cupsd -f
