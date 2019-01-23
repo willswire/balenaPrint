@@ -1,5 +1,8 @@
 #!/bin/bash
 
 # Start dbus
+/etc/init.d/dbus start
+
+# Start avahi
 echo "Starting dbus and avahi services..."
-dbus-daemon & avahi-daemon --no-rlimits --no-drop-root
+avahi-daemon --no-rlimits --no-drop-root
