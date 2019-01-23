@@ -10,4 +10,4 @@ RUN install_packages \
 COPY ./avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 
 # Start app
-ENTRYPOINT ["avahi-daemon", "--no-rlimits"]
+ENTRYPOINT ["avahi-daemon", "--no-rlimits", "--no-drop-root"]
