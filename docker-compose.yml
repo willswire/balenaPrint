@@ -9,10 +9,11 @@ services:
     build: ./airprint
     network_mode: host
     ports:
-     - "53"
+     - "53:53/tcp"
+     - "53:53/udp"
      - "80"
      - "631"
-     - "5353"
+     - "5353:5353/udp"
     volumes:
      - 'cups:/etc/cups'
      - 'avahi:/etc/avahi'
