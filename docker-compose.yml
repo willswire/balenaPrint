@@ -8,6 +8,11 @@ services:
   airprint:
     build: ./airprint
     network_mode: host
+    ports:
+     - "80:80"
+     - "53:53"
+     - "631:631"
+     - "5353:5353"
     volumes:
      - 'cups:/etc/cups'
      - 'avahi:/etc/avahi'
