@@ -19,7 +19,7 @@ services:
     build: ./avahi
     network_mode: host
     ports:
-     - "5353:5353/udp"
+     - "5353"
     volumes:
      - 'avahi:/etc/avahi'
     privileged: true
