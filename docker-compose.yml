@@ -5,17 +5,22 @@ volumes:
   avahi:
 
 services:
-  airprint:
+  cups:
     build: ./airprint
     network_mode: host
     ports:
-     - "53:53/tcp"
-     - "53:53/udp"
      - "80"
      - "631"
-     - "5353:5353/udp"
     volumes:
      - 'cups:/etc/cups'
+    privileged: true
+    restart: always
+  avahi:
+    build: ./avahi
+    network_mode: host
+    ports:
+     - "5353:5353/udp"
+    volumes:
      - 'avahi:/etc/avahi'
     privileged: true
     restart: always
