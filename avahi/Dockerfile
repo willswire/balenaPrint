@@ -8,6 +8,7 @@ RUN install_packages \
 
 # Move setup script and CUPS config to filesystem
 COPY ./avahi-daemon.conf /etc/avahi/avahi-daemon.conf
+COPY ./entry.sh ./
 
 # Start app
-ENTRYPOINT ["avahi-daemon", "--no-rlimits", "--no-drop-root"]
+CMD ["bash", "entry.sh"]
