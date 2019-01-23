@@ -7,6 +7,16 @@ services:
   airprint:
     build: ./airprint
     network_mode: host
+    ports:
+     - '53:53'
+     - '137:137'
+     - '139:139'
+     - '161:161'
+     - '443:443'
+     - '445:445'
+     - '515:515'
+     - '631:631'
+     - '5353:5353'
     volumes:
       - 'cups:/etc/cups'
     privileged: true

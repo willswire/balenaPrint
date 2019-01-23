@@ -6,10 +6,6 @@
 # echo "Establishing SymLink for server.key..."
 # ln -s /etc/ssl/private/ssl-cert-snakeoil.key /etc/cups/ssl/server.key
 
-# Allow access to CUPS Control Panel on Port 80
-echo "" >> /etc/cups/cupsd.conf
-echo "Port 80" >> /etc/cups/cupsd.conf
-
 # Change password to defaultpassword for root user
 echo "Setting default password for CUPS"
 echo 'root:defaultpassword' | chpasswd
