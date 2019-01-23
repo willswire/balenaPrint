@@ -18,6 +18,8 @@ services:
   avahi:
     build: ./avahi
     network_mode: host
+    depends_on:
+     - cups
     ports:
      - "5353"
     volumes:
