@@ -18,6 +18,7 @@ RUN install_packages \
 
 # Move setup script and CUPS config to filesystem
 COPY ./entry.sh ./
+COPY ./cupsd.conf /etc/cups/cupsd.conf
 
 # Allow USB devices to connect
 ENV UDEV=1
