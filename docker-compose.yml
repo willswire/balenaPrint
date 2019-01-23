@@ -1,0 +1,13 @@
+version: '2.1'
+
+volumes:
+  cups:
+
+services:
+  airprint:
+    build: ./airprint
+    network_mode: host
+    volumes:
+      - 'cups:/etc/cups'
+    privileged: true
+    restart: always

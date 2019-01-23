@@ -16,13 +16,8 @@ RUN install_packages \
     smbclient \
     udev
 
-
-# Move to WORKDIR
-WORKDIR /usr/src/
-
 # Move setup script and CUPS config to filesystem
 COPY ./entry.sh ./
-COPY ./cups ./cups
 
 # Allow USB devices to connect
 ENV UDEV=1

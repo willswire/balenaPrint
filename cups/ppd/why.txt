@@ -1,4 +1,0 @@
-This file exists for the ppd directory
-
-
-Adding text for the tut
