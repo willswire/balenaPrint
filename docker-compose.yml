@@ -6,7 +6,7 @@ volumes:
 
 services:
   cups:
-    build: ./airprint
+    build: ./cups
     network_mode: host
     ports:
      - "80"
