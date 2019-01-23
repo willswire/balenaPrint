@@ -10,5 +10,10 @@
 echo "Setting default password for CUPS"
 echo 'root:defaultpassword' | chpasswd
 
-echo "CUPS and Avahi services starting..."
-cupsd -f & avahi-daemon
+# Start DBUS and AVAHI daemons
+/etc/init.d/dbus start
+/etc/init.d/avahi-daemon start
+
+# Start the CUPS service
+echo "CUPS starting..."
+cupsd -f
