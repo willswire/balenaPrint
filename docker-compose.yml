@@ -2,6 +2,7 @@ version: '2.1'
 
 volumes:
   cups:
+  avahi:
 
 services:
   airprint:
@@ -20,5 +21,6 @@ services:
      - '5353:5353'
     volumes:
      - 'cups:/etc/cups'
+     - 'avahi:/etc/avahi'
     privileged: true
     restart: always

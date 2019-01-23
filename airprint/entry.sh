@@ -10,8 +10,8 @@
 echo "Setting default password for CUPS"
 echo 'root:defaultpassword' | chpasswd
 
-# Start DBUS and AVAHI daemons
-/etc/init.d/dbus start
+# Start AVAHI daemon
+sed -i -r 's/#enable-dbus=yes/enable-dbus=no/' /etc/avahi/avahi-daemon.conf
 /etc/init.d/avahi-daemon start
 
 # Start the CUPS service
