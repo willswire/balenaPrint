@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi-debian:buster
+FROM balenalib/raspberrypi3-debian:buster
 
 # Install CUPS
 RUN install_packages \
@@ -19,7 +19,7 @@ COPY ./entry.sh ./
 COPY ./cupsd.conf /etc/cups/cupsd.conf
 
 # Allow USB devices to connect
-ENV UDEV=1
+ENV UDEV 1
 
 # Start app
 CMD ["bash", "entry.sh"]
