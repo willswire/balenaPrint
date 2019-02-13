@@ -7,6 +7,7 @@ RUN install_packages \
 
 # Move setup script and CUPS config to filesystem
 COPY ./entry.sh ./entry.sh
+COPY ./avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 
 # Start app
 CMD ["bash", "entry.sh"]
