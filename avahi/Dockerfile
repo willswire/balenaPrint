@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi-debian:buster
+FROM balenalib/raspberrypi3-debian:buster
 
 # Install CUPS
 RUN install_packages \
