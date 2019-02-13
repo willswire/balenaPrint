@@ -1,7 +1,9 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
 
 # Install CUPS
-RUN install_packages cups
+RUN install_packages \
+    bash \
+    cups
 
 # Move setup script and CUPS config to filesystem
 COPY ./entry.sh ./entry.sh
