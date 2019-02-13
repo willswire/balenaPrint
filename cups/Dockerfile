@@ -1,21 +1,10 @@
-FROM balenalib/raspberrypi3-debian:buster
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
 
 # Install CUPS
-RUN install_packages \
-    cups \
-    colord \
-    cups-filters \
-    printer-driver-gutenprint \
-    cups-bsd \
-    cups-pdf \
-    foomatic-db-compressed-ppds \
-    hplip \
-    printer-driver-hpcups \
-    smbclient \
-    udev
+RUN install_packages cups
 
 # Move setup script and CUPS config to filesystem
-COPY ./entry.sh ./
+COPY ./entry.sh ./entry.sh
 COPY ./cupsd.conf /etc/cups/cupsd.conf
 
 # Allow USB devices to connect
