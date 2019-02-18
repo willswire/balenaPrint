@@ -3,6 +3,7 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
 # Install CUPS
 RUN install_packages \
     avahi \
+    avahi-tools \
     bash
 
 # Move setup script and CUPS config to filesystem
