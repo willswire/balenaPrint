@@ -9,6 +9,7 @@ services:
     build: ./cups
     network_mode: host
     volumes:
+     - 'avahi:/etc/avahi'
      - 'cups:/etc/cups'
     privileged: true
     restart: always
@@ -16,8 +17,9 @@ services:
     build: ./avahi
     network_mode: host
     depends_on:
-     - cups
+    - cups
     volumes:
      - 'avahi:/etc/avahi'
+     - 'cups:/etc/cups'
     privileged: true
     restart: always
