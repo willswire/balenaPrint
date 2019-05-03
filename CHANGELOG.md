@@ -2,6 +2,10 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0 - 2019-5-3
+
+- Incorporate custom cupsd.conf for access via public device url
+
 ## 3.0.0 - 2019-4-10
 
 - Reduce to single container

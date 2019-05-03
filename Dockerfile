@@ -1,32 +1,20 @@
-FROM balenalib/raspberrypi3-debian
+FROM balenalib/raspberrypi3
 
-# Install packages
-ENV container docker
+# Install the packages we need. Avahi will be included
 RUN install_packages \
-    systemd \
     cups \
     avahi-daemon \
     avahi-discover \
     libnss-mdns
 
-# Balena-specified services we don't want running in the container
-RUN systemctl mask \
-    dev-hugepages.mount \
-    sys-fs-fuse-connections.mount \
-    sys-kernel-config.mount \
-    display-manager.service \
-    getty@.service \
-    systemd-logind.service \
-    systemd-remount-fs.service \
-    getty.target \
-    graphical.target
+# Add script
+COPY run.sh /
 
-COPY entry.sh /usr/bin/entry.sh
+# Add cupsd.conf file
+COPY cupsd.conf /etc/cups/cupsd.conf
 
-RUN systemctl enable cups.service
-RUN systemctl enable avahi-daemon.service
+#Run Script
+CMD bash run.sh
 
-STOPSIGNAL 37
-VOLUME ["/sys/fs/cgroup"]
-VOLUME ["/etc/cups"]
-ENTRYPOINT ["/usr/bin/entry.sh"]
+# Baked-in config file changes so that avahi can run without dbus
+RUN sed -i 's/.*enable\-dbus=.*/enable\-dbus\=no/' /etc/avahi/avahi-daemon.conf
