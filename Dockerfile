@@ -4,7 +4,6 @@ FROM balenalib/raspberrypi3
 RUN install_packages \
     cups \
     avahi-daemon \
-    avahi-discover \
     libnss-mdns
 
 # Add script
