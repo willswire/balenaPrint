@@ -2,6 +2,15 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 5.0.0 - 2019-5-3
+
+- Remove Avahi (utilizing balenaOS instance)
+- Filter IP traffic based on source (enable public device URL)
+- Introduce `docker-compose` file to ensure DBUS connectivity
+- Add volume and mount to /etc/cups/ for persistence of configuration files
+- Verified AirPrint working configuration with Enterprise networks
+- Visibility on iOS devices
+
 ## 4.1.0 - 2019-5-3
 
 - Remove unused avahi-discover package
