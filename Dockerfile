@@ -9,6 +9,9 @@ RUN install_packages \
 # Add script
 COPY run.sh /
 
+# Enable USB devices
+ENV UDEV 1
+
 # Add cupsd.conf file
 COPY cupsd.conf /etc/cups/cupsd.conf
 

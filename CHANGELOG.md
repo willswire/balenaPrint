@@ -5,6 +5,7 @@ All entries are made manually. This project adheres to [Semantic Versioning](htt
 ## 4.1.0 - 2019-5-3
 
 - Remove unused avahi-discover package
+- Enable USB functionality
 
 ## 4.0.0 - 2019-5-3
 
