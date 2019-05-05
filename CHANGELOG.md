@@ -2,6 +2,9 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 5.1.0 - 2019-5-5
+- Remove Port 631 from cupsd.conf
+
 ## 5.0.0 - 2019-5-3
 
 - Remove Avahi (utilizing balenaOS instance)
