@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3
+FROM balenalib/%%BALENA_MACHINE_NAME%%:build
 
 # Install the packages we need. Avahi will be included
 RUN install_packages \
@@ -6,7 +6,8 @@ RUN install_packages \
     iptables \
     avahi-daemon \
     dbus \
-    libnss-mdns
+    libnss-mdns \
+    foomatic-db-compressed-ppds 
 
 # Add script
 COPY run.sh /
@@ -18,4 +19,4 @@ ENV UDEV 1
 COPY cupsd.conf /etc/cups/cupsd.conf
 
 #Run Script
-CMD bash run.sh
+CMD ["bash", "run.sh"]
