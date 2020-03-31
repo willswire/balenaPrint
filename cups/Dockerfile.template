@@ -8,6 +8,7 @@ RUN install_packages \
     dbus \
     libnss-mdns \
     foomatic-db-compressed-ppds \
+    printer-driver-brlaser \
     hplip
 
 # Add script
