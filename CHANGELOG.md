@@ -2,6 +2,14 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.0.0 - 2020-3-31
+- Use Dockerfile.template [rahul-thakoor]
+- Added support for foomatic drivers [rahul-thakoor]
+- Allow remote access [rahul-thakoor]
+- Startup message [rahul-thakoor]
+- Broadened support for HP Printers [rahul-thakoor]
+- Added support for Brother laser printers [Trond Viggo Håpnes]
+
 ## 5.1.0 - 2019-5-5
 - Remove Port 631 from cupsd.conf
 
