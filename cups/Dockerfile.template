@@ -9,7 +9,8 @@ RUN install_packages \
     libnss-mdns \
     foomatic-db-compressed-ppds \
     printer-driver-brlaser \
-    hplip
+    hplip \
+    hplip-data
 
 # Add script
 COPY run.sh /
@@ -19,6 +20,9 @@ ENV UDEV 1
 
 # Add cupsd.conf file
 COPY cupsd.conf /etc/cups/cupsd.conf
+
+# Link DBUS file where hp-setup expects it
+RUN ln -s /host/run/dbus /var/run/dbus
 
 #Run Script
 CMD ["bash", "run.sh"]
