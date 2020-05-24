@@ -2,6 +2,9 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.1.0 - 2020-5-24
+- Add autoconfiguration of HP network printers [headlesscow]
+
 ## 6.0.1 - 2020-4-2
 - Change ordering of listen directive to fix support for Android [rahul-thakoor]
 
