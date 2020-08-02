@@ -10,7 +10,22 @@ RUN install_packages \
     foomatic-db-compressed-ppds \
     printer-driver-brlaser \
     hplip \
-    hplip-data
+    hplip-data \
+    libcups2-dev \
+    build-essential 
+
+# Add support for Samsung printers via Splix
+WORKDIR /usr/src/app
+
+RUN git clone https://gitlab.com/ScumCoder/splix.git
+
+WORKDIR /usr/src/app/splix/splix
+
+RUN sudo make DISABLE_JBIG=1 && \
+    sudo make install && \
+    cp ./ppd/m2020.ppd /usr/share/ppd/custom
+
+WORKDIR /
 
 # Add script
 COPY run.sh /
