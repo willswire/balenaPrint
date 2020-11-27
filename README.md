@@ -7,7 +7,7 @@ The CUPS management console is available through the Device Public URL within th
 
 The folks at balena have created [this guide](https://www.balena.io/blog/wifi-enable-usb-printers-with-a-raspberry-pi-and-share-it-over-your-network/) to help people get started with using balena-cups. If you're familiar with balenaCloud and want an even faster way to get started, click here:
 
-[![Deploy with balena](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+[![Deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy)
 
 We're happy to help people trying this project out on [our forums](https://forums.balena.io/).
 
