@@ -1,5 +1,5 @@
 
-![Project Icon](logo.png =100x)
+<img src="logo.png" width="100"/>
 # balenaPrint
 
 This project provides an easy way of running CUPS/Avahi on a balenaOS-provisioned Raspberry Pi 3 B/B+. CUPS is a modular printing system for Unix-like computer operating systems which allows computers to act as a print server, in this case enabling AirPrint capability for legacy printers.
