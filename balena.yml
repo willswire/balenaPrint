@@ -1,11 +1,11 @@
 version: "2"
-slug: "balena-cups"
-name: "balenaCups"
+slug: "balenaPrint"
+name: "balenaPrint"
 type: "sw.application"
 assets:
-  - url: "https://github.com/willswire/balena-cups"
+  - url: "https://github.com/willswire/balenaPrint"
     name: "repository"
-  - url: "https://raw.githubusercontent.com/willswire/balena-cups/master/logo.png"
+  - url: "https://raw.githubusercontent.com/willswire/balenaPrint/master/logo.png"
     name: "logo"
 data:
   description: "Add wireless and AirPrint capability to legacy printers, powered by a Raspberry Pi."

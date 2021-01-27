@@ -1,6 +1,10 @@
-# Changelog for balena-cups
+# Changelog for balenaPrint
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
+
+## 6.2.0 - 2021-1-27
+- Rename project to balenaPrint [willswire]
+- Added balena.yml file for baleneHub [willswire]
 
 ## 6.1.0 - 2020-5-24
 - Add autoconfiguration of HP network printers [headlesscow]
