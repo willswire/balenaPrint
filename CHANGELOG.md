@@ -1,4 +1,4 @@
-# Changelog for balena-cups
+# Changelog for balenaPrint
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
