@@ -13,3 +13,10 @@ data:
   defaultDeviceType: "raspberrypi3"
   supportedDeviceTypes:
     - "raspberrypi3"
+    - "raspberrypi4-64"
+    - "fincm3"
+    - "nanopi-neo-air"
+    - "raspberrypi3-64"
+    - "intel-nuc"
+    - "beaglebone-green-wifi"
+    - "genericx86-64-ext"
