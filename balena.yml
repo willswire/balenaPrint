@@ -33,3 +33,4 @@ data:
     - intel-nuc
     - beaglebone-green-wifi
     - genericx86-64-ext
+version: 6.3.0
