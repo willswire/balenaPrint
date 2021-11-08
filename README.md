@@ -14,9 +14,3 @@ The folks at balena have created [this guide](https://www.balena.io/blog/wifi-en
 [![Deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/willswire/balena-cups)
 
 We're happy to help people trying this project out on [our forums](https://forums.balena.io/).
-
-# Donating
-
-Please consider donating to this project!
-
-<a href="https://www.buymeacoffee.com/williamwalker" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
