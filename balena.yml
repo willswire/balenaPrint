@@ -1,25 +1,35 @@
-name: "balenaPrint"
-type: "sw.application"
-description: "Add wireless and AirPrint capability to legacy printers, powered by a Raspberry Pi."
+name: balenaPrint
+description: >-
+  Add wireless and AirPrint capability to legacy 
+  USB-enabled printers, powered by a Raspberry Pi.
 joinable: false
+post-provisioning: >-
+  ## Usage instructions
+  
+  Once the balenaPrint image has been deployed to your fleet, 
+  navigate to the device actions tab on the balenaCloud 
+  dashboard and enable the public URL for the device. Access
+  the public URL to configure CUPS settings and preferences.
+type: sw.application
 assets:
   repository:
-    type: "blob.asset"
+    type: blob.asset
     data:
-      url: "https://github.com/willswire/balenaPrint"
+      url: 'https://github.com/willswire/balenaPrint'
   logo:
-    type: "blob.asset"
+    type: blob.asset
     data:
-      url: "https://raw.githubusercontent.com/willswire/balenaPrint/master/logo.png"
+      url: >-
+        https://raw.githubusercontent.com/willswire/balenaPrint/master/logo.png
 data:
   applicationEnvironmentVariables:
-  defaultDeviceType: "raspberrypi3"
+  defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
-    - "raspberrypi3"
-    - "raspberrypi4-64"
-    - "fincm3"
-    - "nanopi-neo-air"
-    - "raspberrypi3-64"
-    - "intel-nuc"
-    - "beaglebone-green-wifi"
-    - "genericx86-64-ext"
+    - raspberrypi3
+    - raspberrypi4-64
+    - fincm3
+    - nanopi-neo-air
+    - raspberrypi3-64
+    - intel-nuc
+    - beaglebone-green-wifi
+    - genericx86-64-ext
