@@ -1,6 +1,7 @@
 name: "balenaPrint"
 type: "sw.application"
 description: "Add wireless and AirPrint capability to legacy printers, powered by a Raspberry Pi."
+joinable: false
 assets:
   repository:
     type: "blob.asset"
