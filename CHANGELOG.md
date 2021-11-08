@@ -2,6 +2,10 @@
 
 All entries are made manually. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 6.3.0 - 2021-11-7
+- TLC on various repo artifacts [willswire]
+- Update to support balenaFleets [willswire]
+
 ## 6.2.0 - 2021-1-27
 - Rename project to balenaPrint [willswire]
 - Added balena.yml file for baleneHub [willswire]
