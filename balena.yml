@@ -22,7 +22,6 @@ assets:
       url: >-
         https://raw.githubusercontent.com/willswire/balenaPrint/master/logo.png
 data:
-  applicationEnvironmentVariables:
   defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
     - raspberrypi3
