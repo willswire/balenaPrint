@@ -9,6 +9,7 @@ iptables -A INPUT -p tcp --dport 80 -i resin-vpn -j ACCEPT
 iptables -A INPUT -p tcp --dport 80 -j REJECT
 
 echo "Starting CUPS"
+lpinfo -m
 cupsd -f &
 
 
